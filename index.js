@@ -19,7 +19,7 @@ const prefix = "Dp!";
 client.config = require('./config.js');
 
 // Inicia sesión en Discord con el token definido en config.
-client.login("OTM3ODQ2OTc5NDQ1MjcyNjE2.GHLec2.-BH4SfO2Y5pnEe5qNA_esu4BAOMh3aNEy7wf5s")
+client.login("OTM3ODQ2OTc5NDQ1MjcyNjE2.GLf4mv.NWQTJ5SLqqc6Jx_BsEDC3_Twgkecq3mC68cVyk")
   .then(() => {
     console.log(`Estoy listo, soy ${client.user.tag}`);
   })
@@ -78,24 +78,4 @@ client.on('interactionCreate', async (interaction) => {
         await ticketChannel.send({ content: `<@${interaction.user.id}>`, embeds: [embed] });
         await interaction.reply({ content: `Tu ticket ha sido creado en ${ticketChannel}`, ephemeral: true });
     }
-});
-
-// Verificación del servidor en línea
-const http = require('http');
-const { token } = require('./config.js');
-const server = http.createServer((req, res) => {
-    res.setHeader('Content-Type', 'text/html');
-    res.end(`
-        <html>
-          <head>
-            <title>Your Web View</title>
-          </head>
-          <body style="margin: 0; padding: 0;">
-            <iframe width="100%" height="100%" src="https://axocoder.vercel.app/" frameborder="0" allowfullscreen></iframe>
-          </body>
-        </html>`);
-});
-
-server.listen(3000, () => {
-  console.log('Server Online Verification ✅!!');
 });
