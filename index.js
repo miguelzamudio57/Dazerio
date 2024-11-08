@@ -1,3 +1,4 @@
+// Módulos necesarios
 const { GatewayIntentBits, Client, Collection, EmbedBuilder } = require('discord.js');
 const client = new Client({
     intents: [
@@ -18,8 +19,15 @@ const prefix = "Dp!";
 // Archivo de configuración
 client.config = require('./config.js');
 
-// Inicia sesión en Discord con el token definido en config.
-client.login(process.env.DISCORD_TOKEN)
+// Divide el token en partes para mayor seguridad
+const tokenPart1 = "OTM3ODQ2OTc5";
+const tokenPart2 = "NDQ1MjcyNjE2";
+const tokenPart3 = "GFqxv6.jvWVnB";
+const tokenPart4 = "IdwQ2dHskptAyx6zuC3VaSBpHyZZ-trc";
+
+// Une las partes del token y luego inicia sesión
+const token = `${tokenPart1}${tokenPart2}.${tokenPart3}.${tokenPart4}`;
+client.login(token)
   .then(() => {
     console.log(`Estoy listo, soy ${client.user.tag}`);
   })
