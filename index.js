@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { GatewayIntentBits, Client, Collection, EmbedBuilder } = require('discord.js');
 const client = new Client({
     intents: [
@@ -19,7 +20,7 @@ const prefix = "Dp!";
 client.config = require('./config.js');
 
 // Inicia sesión en Discord con el token definido en config.
-client.login("OTM3ODQ2OTc5NDQ1MjcyNjE2.G6ZSgB.uJnbk2nl7gv17UJO5C4ZMpD2tPc_0Cnfu0Y7kY")
+client.login(process.env.DISCORD_TOKEN)
   .then(() => {
     console.log(`Estoy listo, soy ${client.user.tag}`);
   })
