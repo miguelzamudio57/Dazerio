@@ -19,13 +19,11 @@ const prefix = "Dp!";
 // Archivo de configuración
 client.config = require('./config.js');
 
-// Divide el token en partes para mayor seguridad
+
 const tokenPart1 = "OTM3ODQ2OTc5";
 const tokenPart2 = "NDQ1MjcyNjE2";
 const tokenPart3 = "GFqxv6.jvWVnB";
 const tokenPart4 = "IdwQ2dHskptAyx6zuC3VaSBpHyZZ-trc";
-
-// Une las partes del token y luego inicia sesión
 const token = `${tokenPart1}${tokenPart2}.${tokenPart3}.${tokenPart4}`;
 client.login(token)
   .then(() => {
