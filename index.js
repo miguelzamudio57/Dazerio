@@ -19,7 +19,7 @@ const prefix = "Dp!";
 client.config = require('./config.js');
 
 // Inicia sesión en Discord con el token definido en config.
-client.login("OTM3ODQ2OTc5NDQ1MjcyNjE2.GH48sp.oRQxeODCMnl6XHAUtyp4_xobCp2uOwXjdcrByM")
+client.login("OTM3ODQ2OTc5NDQ1MjcyNjE2.GHLec2.-BH4SfO2Y5pnEe5qNA_esu4BAOMh3aNEy7wf5s")
   .then(() => {
     console.log(`Estoy listo, soy ${client.user.tag}`);
   })
