@@ -36,7 +36,7 @@ module.exports = {
         
          .setDescription(`User 1 - ${name1}\nUser2 - ${name2}\nPorcentaje de amor - ${percent}%`)
         
-        .setFooter({ text: 'Dazerio ❤️ Calculator', iconURL: 'https://images-ext-2.discordapp.net/external/WQrOXkzw5n2Y0GFiZjTRGFl3VvpYkRHTZPBbpGh_3dc/https/cdn.discordapp.com/avatars/903514629790117950/0d7c3ab36bb40ca9be2319f8b14717a3.webp' })
+        .setFooter({ text: 'Dazerio ❤️ Calculator', iconURL: 'https://cdn.discordapp.com/attachments/1294292965476536390/1305884022450290741/Dazerio_2.png?ex=6734a6c5&is=67335545&hm=83253c2dcb9aa73dcdcfb6741d6e7d73765b03cf4d76b2c3abc695e319f6c520&' })
 
     message.channel.send({embeds: [embed]})
     }
