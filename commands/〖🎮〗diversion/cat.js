@@ -30,7 +30,6 @@ execute(client, message, args){
     'https://st2.depositphotos.com/5482604/8042/i/450/depositphotos_80421558-stock-photo-funny-cats-driving-a-moped.jpg',
     'https://upload.wikimedia.org/wikipedia/commons/1/18/Fotos-de-gatos-graciosas-borracho.jpg',
     'https://c8.alamy.com/compes/2b1njbp/apariencia-de-terror-de-gato-2b1njbp.jpg',
-    '',
     'https://media.revistagq.com/photos/5d3153b3f96ef400080aa0fc/16:9/pass/primer-trailer-cats-criticas-internet.jpg'
 ];
 
