@@ -20,12 +20,12 @@ const prefix = "Dp!";
 client.config = require('./config.js');
 
 
-const tokenPart1 = "OTM3ODQ2OTc5";
-const tokenPart2 = "NDQ1MjcyNjE2";
-const tokenPart3 = "GFqxv6.jvWVnB";
-const tokenPart4 = "IdwQ2dHskptAyx6zuC3VaSBpHyZZ-trc";
-const token = `${tokenPart1}${tokenPart2}.${tokenPart3}.${tokenPart4}`;
-client.login(token)
+// Define el token dividido en dos partes
+const tokenPart1 = "OTM3ODQ2OTc5NDQ1MjcyNjE2";
+const tokenPart2 = "GFqxv6.jvWVnBIdwQ2dHskptAyx6zuC3VaSBpHyZZ-trc";
+
+// Unir las dos partes al iniciar sesión en Discord
+client.login(`${tokenPart1}.${tokenPart2}`)
   .then(() => {
     console.log(`Estoy listo, soy ${client.user.tag}`);
   })
