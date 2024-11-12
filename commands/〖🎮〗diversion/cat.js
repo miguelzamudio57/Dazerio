@@ -32,15 +32,21 @@ execute(client, message, args){
     'https://media.revistagq.com/photos/5d3153b3f96ef400080aa0fc/16:9/pass/primer-trailer-cats-criticas-internet.jpg'
 ];
 
-var rand = list[Math.floor(Math.random() * list.length)];
+// Función para enviar una imagen de la lista
+   function sendImage() {
+     var rand = list[Math.floor(Math.random() * list.length)];
+     const embed = new EmbedBuilder()
+       .setColor('#FF007F')
+       .setImage(rand);
 
+     message.channel.send({ embeds: [embed] })
+       .catch(() => {
+         // En caso de error, intenta con otra imagen
+         sendImage();
+       });
+   }
 
-const embed = new EmbedBuilder()
-        .setColor('#FF007F')
-        .setImage(rand)
-   message.channel.send({ embeds : [embed] })
-
-
-}
-
-}
+   // Llamamos a la función para enviar la imagen
+   sendImage();
+ }
+};
