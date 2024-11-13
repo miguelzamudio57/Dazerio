@@ -4,7 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts",
+    "build": "tsc --build",
+    "deploy:commands": "node deploy-commands",
+    "start": "npm run clean && npm run build && node build/index.js",
+    "setup": "npm install && npm run build && node deploy-commands.js && npm run start",
+    "start:bot": "npm run deploy:commands && npm run start",
+    "clean": "rm -rf build"
   },
   "author": "",
   "license": "ISC",
